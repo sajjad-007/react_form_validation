@@ -32,36 +32,27 @@ function App() {
       console.log(change);
       setError("")
     }
-    // // if (!change.address) {
-    // //   setError({address: "enter your address"});
-    // // } else {
-    //   console.log(change);
-    // }
-    // if (!change.email) {
-    //   setError({email:"enter your email"});
-    // } else {
-    //   console.log(change);
-    // }
-    // if (!change.password) {
-    //   setError({password:"enter your passwrod"});
-    // } else {
-    //   console.log(change);
-    //   setError("")
-    // }
+
   }
   return (
    <>
     <div className="main">
       <form onSubmit={(event)=> event.preventDefault()}>
+      <h1>Open your console and see your data</h1>
         <h2>React form validation</h2>
+        
         <input onChange={handleInput} type="text" name="fullName" placeholder="Enter Your Name" />
         {error.fullName && <p>{error.fullName}</p> }
+
         <input onChange={handleInput} type="text" name="address" placeholder="Enter Your Address" />
         {error.address && <p>{error.address}</p> }
+
         <input onChange={handleInput} type="text" name="email" placeholder="Enter Your Email" />
         {error.email && <p>{error.email}</p> }
+
         <input onChange={handleInput} type="password" name="password" placeholder="Enter Your Password" />
         {error.password && <p>{error.password}</p> }
+
         <button onClick={handleSubmit}>Submit</button>
       </form>
     </div>
